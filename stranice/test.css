@@ -1,0 +1,61 @@
+header {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+section {
+    border: solid 2px gray;
+    height: auto;
+    width: auto;
+}
+
+hr {
+    border-style: dotted;
+    color: red;
+}
+
+h1::first-letter{
+    font-size: 2em;
+    color: blue;
+}
+
+span::after{
+    content: "\2713";
+    color: blue;
+}
+
+li::marker{
+    color: red;
+}
+
+.prvi_zadatak {
+    list-style-type: upper-alpha;
+}
+
+.drugi_zadatak{
+    list-style-type: lower-alpha;
+}
+ul {
+    list-style: none;
+}
+
+a::before{
+    content: "\2023";
+}
+
+a:visited {
+    color: magenta;
+}
+
+a:hover{
+    color:yellow;
+    background-color: lightgreen;
+}
+
+a:active{
+    color: lightgreen;
+    background-color: yellow;
+}
+
