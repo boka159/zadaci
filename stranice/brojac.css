@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.moj_brojac {
+    margin-left: 0;
+    padding-right: 0;
+    list-style-type: none;
+}
+
+.moj_brojac li {
+    counter-increment: step-counter;
+    margin-top: 3px;
+}
+
+.moj_brojac li::before {
+    content: counter(step-counter);
+    color: blue;
+    background-color: rgb(255, 0, 0);
+    margin-right: 5px;
+    font-size: 80%;
+    font-weight: bold;
+    padding: 3px 8px;
+    border-radius: 10px;
+}
+
+span::after{
+    content: "\2713";
+    color: green;
+    font-weight: 900;
+    font-size: 16px;
+}
