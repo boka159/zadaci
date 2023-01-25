@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Off canvas CSS-->
     <link rel="stylesheet" href="navigacija_menu.css">
     <link rel="stylesheet" href="card-style.css">
+    <link rel="stylesheet" href="sidebar-style.css">
     <title>Moja stranica</title>
 </head>
 <body>
@@ -13,47 +16,58 @@
             <h1 class="full-width-header">Moja stranica s Vertikalnim tabovima</h1>
         </div>
     </header>
-<div class="content">
-    <section class="tabs-container">
-        <label for="tab1">Priroda</label>
-        <label for="tab2">Cvijeće</label>
-        <label for="tab3">Planina</label>
-        <label for="tab4">Zgrade</label>
-        <label for="tab5">Ceste</label>
-        <label for="tab6">Šume</label>
-        <label for="tab7">Fancy cards</label>
-    </section>
 
-    <input type="radio" name="tab" id="tab1" checked>
-    <section class="tab-content">
-        <h2>Priroda</h2>
-        <p>Neki moj tekst koji je povezan s prirodom.</p>
-        <img src="../img/sea.jpg" alt="More">
-        <p>Opis koji će se odnositi na prethodnu sliku prirode.</p>
-    </section>
+<div class="menu-wrapper">
 
-    <input type="radio" name="tab" id="tab2">
-    <section class="tab-content">
-        <h2>Cvijeće</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <img src="../img/sea.jpg" alt="Cvijeće">
-    </section>
+    <!-- Hamburger menu -->
+    <input type="checkbox" data-function="swipe" id="swipe">
+    <label for="swipe" data-function="swipe">&#xf0c9</label>
+
+    <!-- Naš vertikalni menu -->
+    <div class="sidebar">
+        <section class="tabs-container">
+            <label for="tab1">Priroda</label>
+            <label for="tab2">Cvijeće</label>
+            <label for="tab3">Planina</label>
+            <label for="tab4">Zgrade</label>
+            <label for="tab5">Ceste</label>
+            <label for="tab6">Šume</label>
+            <label for="tab7">Fancy cards</label>
+        </section>
+    </div>
+
+    <!-- Content area-->
+    <div class="content">
+        <input type="radio" name="tab" id="tab1" checked>
+        <section class="tab-content">
+            <h2>Priroda</h2>
+            <p>Neki moj tekst koji je povezan s prirodom.</p>
+            <img src="../img/sea.jpg" alt="More">
+            <p>Opis koji će se odnositi na prethodnu sliku prirode.</p>
+        </section>
+
+        <input type="radio" name="tab" id="tab2">
+        <section class="tab-content">
+            <h2>Cvijeće</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <img src="../img/sea.jpg" alt="Cvijeće">
+        </section>
     
-    <input type="radio" name="tab" id="tab3">
-    <section class="tab-content">
-        <h2>Planina</h2>
-        <p>Neki moj tekst koji je povezan s prirodom.</p>
-        <img src="../img/sea.jpg" alt="Planina">
-        <p>Opis koji će se odnositi na prethodnu sliku prirode.</p>
-    </section>
+        <input type="radio" name="tab" id="tab3">
+        <section class="tab-content">
+            <h2>Planina</h2>
+            <p>Neki moj tekst koji je povezan s prirodom.</p>
+            <img src="../img/sea.jpg" alt="Planina">
+            <p>Opis koji će se odnositi na prethodnu sliku prirode.</p>
+        </section>
 
-    <input type="radio" name="tab" id="tab4">
-    <section class="tab-content">
-        <h2>Zgrade</h2>
-        <p>Neki moj tekst koji je povezan s prirodom.</p>
-        <img src="../img/sea.jpg" alt="Zgrade">
-        <p>Opis koji će se odnositi na prethodnu sliku prirode.</p>
-    </section>
+        <input type="radio" name="tab" id="tab4">
+        <section class="tab-content">
+            <h2>Zgrade</h2>
+            <p>Neki moj tekst koji je povezan s prirodom.</p>
+            <img src="../img/sea.jpg" alt="Zgrade">
+            <p>Opis koji će se odnositi na prethodnu sliku prirode.</p>
+        </section>
 
     <input type="radio" name="tab" id="tab5">
     <section class="tab-content">
@@ -102,22 +116,24 @@
                     </div>
                 </div>
             </div>
-            <div class="card">
-                <div class="face face1">
-                    <div class="content">
-                        <img src="../img/launch_128.png">
-                        <h3>Launch</h3>
+                <div class="card">
+                    <div class="face face1">
+                        <div class="content">
+                            <img src="../img/launch_128.png">
+                            <h3>Launch</h3>
+                        </div>
                     </div>
-                </div>
-                <div class="face face2">
-                    <div class="content">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ut excepturi non nemo veritatis, ipsa inventore sit dolore harum explicabo maxime nostrum exercitationem optio quidem qui porro sint, vero natus.</p>
-                        <a href="0">Read More</a>
+                    <div class="face face2">
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ut excepturi non nemo veritatis, ipsa inventore sit dolore harum explicabo maxime nostrum exercitationem optio quidem qui porro sint, vero natus.</p>
+                            <a href="0">Read More</a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
         </div>
-    </section>
-</div>
+    </div>
+</div>    
 </body>
 </html>
