@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontekstualni selektori</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div p {
+            text-decoration: underline;
+        }
+
+        .naznaka p {
+            color:green;
+        }
+
+        .naznaka .tekst {
+            background-color: yellow;
+            font-size: italic;
+        }
+
+        div>span {
+            color:red;
+            border-bottom: 2px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>
+            Paragraf unutar div-a, paragraf je prvi potomak div elementa, na njemu je primjenjena samo dekoracija podcrtanosti.
+        </p>
+    </div>
+    <div class="naznaka">
+        <p>
+            Paragraf unutar div-a, paragraf je prvi potomak div elementa, na njemu je primjenjena nasljedna dekoracija podcrtanosti, no također i svojstvo boje koje je definirano u klasi za paragraf element!.
+        </p>
+        <p class="tekst">
+            Paragraf unutar div-a, paragraf je prvi potomak div elementa, na njemu je primjenjena nasljedna dekoracija podcrtanosti, nasljedna dekoracija boje, no također i svojstvo stila fonta "italic" i pozadinske boje jer je primjenjeno svojstvo obje
+        </p>
+        <span>
+            Prvi span unutar div elementa, span element je prvi direktan potomak div elementa i na njega su primjenjena svojstva.
+        </span>
+        <p>
+            <span>
+                Drugi span unutar paragraf elementa, nije direktan potomak od div elementa i na njega se ne primjenjuje svojstvo css-a!!
+            </span>
+        </p>
+        <span>
+            Drugi span unutar div elementa, ovaj span element je također direktan potomak div elementa i na njega su primjenjena svojstva.
+        </span>
+    </div>
+</body>
+</html>

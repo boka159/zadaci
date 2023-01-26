@@ -36,7 +36,8 @@ div.header-line {
     font-size: 1.125rem;
 }
 
-.full-width-header::before, .full-width-header::after {
+.full-width-header::before,
+.full-width-header::after {
     content: "";
     position: absolute;
     top: 0;
@@ -49,10 +50,6 @@ div.header-line {
 .full-width-header::after {
     left: 100%;
     background: blue;
-}
-
-img {
-    width: 100%;
 }
 
 /* Tabovi */
@@ -72,7 +69,8 @@ img {
     position: relative;
     padding: 10px;
     border-bottom: 1px solid greenyellow;
-    display: block; /*želimo da svaki element zauzima cijelu liniju menija*/
+    display: block;
+    /*želimo da svaki element zauzima cijelu liniju menija*/
     font-size: 13px;
     color: whitesmoke;
     cursor: pointer;
@@ -83,9 +81,10 @@ img {
 .tabs-container label:hover {
     background: darkslateblue;
 }
+
 /* Sakrij radio optione od korisnika*/
 
-input[name="tab"]{
+input[name="tab"] {
     display: none;
 }
 
@@ -108,11 +107,16 @@ input[name="tab"]{
     clear: both;
 }
 
-.tabs-container label:hover{
+.content .tab-content img {
+    width: 100%;
+    max-height: 1280px;
+}
+
+.tabs-container label:hover {
     background: darkslateblue;
 }
 
-input[name="tab"]:checked + .tab-content {
+input[name="tab"]:checked+.tab-content {
     display: block;
     animation: slide 0.5s forwards;
 }
@@ -122,6 +126,7 @@ input[name="tab"]:checked + .tab-content {
         left: -100%;
         opacity: 0;
     }
+
     to {
         left: 0;
         opacity: 1;
