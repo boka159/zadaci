@@ -8,7 +8,7 @@
 }
 
 .sidebar {
-    transform: translate3d(-260px 0px 0px);
+    transform: translate3d(-260px, 0px, 0px);
     position: absolute;
     width: 260px;
     color: #eee;
@@ -17,12 +17,12 @@
     transition: all .3s;
 }
 
-input[data-function*="swipe"]{
+input[data-function*="swipe"] {
     position: relative;
     opacity: 0;
 }
 
-label[data-function*="swipe"]{
+label[data-function*="swipe"] {
     position: relative;
     top: 40px;
     left: 10px;
@@ -38,8 +38,8 @@ label[data-function*="swipe"]{
     transition: transform .3s;
 }
 
-input[data-function*="swipe"]:checked ~ label[data-function*="swipe"] {
-    transform: translate3d(0, 0, 0);
+input[data-function*="swipe"]:checked~label[data-function*="swipe"] {
+    transform: translate3d(260px, 0, 0);
 }
 
 .content {
@@ -48,20 +48,20 @@ input[data-function*="swipe"]:checked ~ label[data-function*="swipe"] {
     z-index: -1;
 }
 
-input[data-function*="swipe"]:checked ~ .content{
+input[data-function*="swipe"]:checked~.content {
     transform: translate3d(245px, 0px, 0px);
 }
 
-input[data-function*="swipe"]:checked ~ .sidebar{
+input[data-function*="swipe"]:checked~.sidebar {
     transform: translate3d(0px, 0px, 0px);
 }
 
-input[data-function*="swipe"]:checked ~ .sidebar .tabs-container {
+input[data-function*="swipe"]:checked~.sidebar .tabs-container {
     width: 100%;
 }
 
 /* override margin-left on tab-content to be nice*/
 
-.tabs-content {
-    margin-left: 60px;
+.tab-content {
+    margin-left: 70px;
 }
